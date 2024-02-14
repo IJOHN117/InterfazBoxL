@@ -17,7 +17,7 @@ public class Main {
         //Creacion de paneles
         JPanel panelGeneral = new JPanel();
         JPanel panelEncabezado = new JPanel();
-        panelEncabezado.setBackground(Color.gray);
+        panelEncabezado.setBackground(Color.gray); // Cambios de color para diferenciar paneles
         JPanel panelCuerpo = new JPanel();
         panelCuerpo.setBackground(Color.lightGray);
         JPanel panelPie = new JPanel();
@@ -32,16 +32,19 @@ public class Main {
         lblClave.setFont(new Font("Arial",1,15));
         JTextField jtxClave = new JTextField(1);
         jtxClave.setHorizontalAlignment(JTextField.CENTER);
+        jtxClave.setFont(new Font("Arial",1,15));
 
         JLabel lblNombre = new JLabel("Nombre");
         lblNombre.setFont(new Font("Arial",1,15));
         JTextField jtxFNombre =new JTextField(1);
         jtxFNombre.setHorizontalAlignment(JTextField.CENTER);
+        jtxFNombre.setFont(new Font("Arial",1,15));
 
         JLabel lblDireccion = new JLabel("Direccion");
         lblDireccion.setFont(new Font("Arial",1,15));
         JTextField jtxDireccion =new JTextField(1);
         jtxDireccion.setHorizontalAlignment(JTextField.CENTER);
+        jtxDireccion.setFont(new Font("Arial",1,15));
 
         JLabel lblCiudad =new JLabel("Ciudad");
         lblCiudad.setFont(new Font("Arial",1,15));
@@ -60,17 +63,17 @@ public class Main {
         panelPie.setLayout(new BoxLayout(panelPie, BoxLayout.X_AXIS));
         panelGeneral.setLayout(new BoxLayout(panelGeneral, BoxLayout.Y_AXIS));
 
-        //
-        panelEncabezado.add(Box.createRigidArea(new Dimension(0, 100)));
-        panelEncabezado.add(Box.createHorizontalGlue());
+
+        //Edicion de encabezado
+        panelEncabezado.add(Box.createRigidArea(new Dimension(0, 100))); //Estas son areas rijidas para que los cuadros de texto se acomoden
+        panelEncabezado.add(Box.createHorizontalGlue()); //HorizontalGlue permite centrar lblEncabezado
         panelEncabezado.add(lblEncabezado);
         panelEncabezado.add(Box.createHorizontalGlue());
 
-
-        //Adicion de componentes a paneles
+        //Edicion de Cuerpo
         panelCuerpo.add(lblClave);
         panelCuerpo.add(jtxClave);
-        panelCuerpo.add(Box.createRigidArea(new Dimension(0, 100)));
+        panelCuerpo.add(Box.createRigidArea(new Dimension(0, 100))); //Estos son areas rijidas para que los cuadros de texto se acomoden
         panelCuerpo.add(lblNombre);
         panelCuerpo.add(jtxFNombre);
         panelCuerpo.add(Box.createRigidArea(new Dimension(0, 100)));
@@ -81,10 +84,9 @@ public class Main {
         panelCuerpo.add(jCmbCiudad);
         panelCuerpo.add(Box.createRigidArea(new Dimension(0, 100)));
 
-
+        //Edicion de Pie
         panelPie.add(jBtnAceptar);
         panelPie.add(jBtnCancelar);
-        panelPie.add(Box.createVerticalGlue());
 
 
         // Adición de paneles al panel general y a la ventana
